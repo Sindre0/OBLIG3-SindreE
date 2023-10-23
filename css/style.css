@@ -12,6 +12,7 @@ header {
     font-weight: 600;
     grid-area: header;
     padding: 1rem;
+    padding-bottom: 0;
 }
 
 header nav {
@@ -68,6 +69,7 @@ main section img {
     flex-direction: column;
     background-color: #FFC37C;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .salebanner h2 {
@@ -290,17 +292,7 @@ footer {
 
 @media only screen and (min-width:600px){
     #grid-container{
-        grid-template-areas: "header header header" ". main ." "footer footer footer" ;
-    }
-
-    .header {
-        padding-bottom: none;
-    }
-
-    .header nav {
-        display: flex;
-        margin: 1rem;
-        font-size: 20px;
+        grid-template-areas: "header header header" ". main main main ." "footer footer footer" ;
     }
 
     .navbar{
@@ -313,6 +305,7 @@ footer {
         list-style: none;
         text-decoration: none;
         padding: 2rem;
+        margin-bottom: 0;
         
         
     }
@@ -321,4 +314,63 @@ footer {
         color: #000;
         text-decoration: none;
     }
+
+    
+    .salebanner {
+        margin-top: 0 !important;
+    }
+
+    .salebanner h2 {
+        font-size: 36px;
+    }
+
+    .shoe720 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .shoe720 img {
+        width: 50%;
+    }
+
+    .shoe720 section {
+        padding: 1rem;
+        width: 40%;
+        align-self: center;
+    }
+
+    .shoe720 h2 {
+        font-size: 40px;
+    }
+
+    .shoe720 a {
+        font-size: 30px;
+    }
+
+    .subscribe h2 {
+        font-size: 40px;
+    }
+
+    .product720 {
+        width: 45%;
+    }
+
+    .product720 img {
+        min-width: 50%;
+        padding: 2rem;
+    }
+
+    .flex-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sizechoose {
+        width: 45%;
+        padding: 1rem;
+        align-self: center;
+    }
+
 }
