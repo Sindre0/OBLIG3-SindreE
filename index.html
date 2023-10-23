@@ -18,28 +18,33 @@
             <div>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-bars"></i>
+                <i id="ham" class="fa-solid fa-bars"></i>
             </div>
         </nav>
-        <section>
+        <div>
             <ul class="navbar">
-                <li><a href="#">Nyheter</a></li>
-                <li><a href="#">Menn</a></li>
-                <li><a href="#">Damer</a></li>
-                <li><a href="#">Barn</a></li>
-                <li><a href="#">Originals</a></li>
+                <li><a href="#">NYHETER</a></li>
+                <li><a href="#">MENN</a></li>
+                <li><a href="#">DAMER</a></li>
+                <li><a href="#">BARN</a></li>
+                <li><a href="#">ORIGINALS</a></li>
             </ul>
-        </section>
+            <ul class="menulist">
+                <li><a href="index.html">Hjemmeside</a></li>
+                <li><a href="produkt.html">Produkter</a></li>
+                <li><a href="retur.html">Retur</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <section class="salebanner">
             <h2>HØSTSALG!</h2>
-            <a href="#" class="black-btn">SE TILBUDENE HER -></a>
+            <a href="produkt.html" class="black-btn">SE TILBUDENE HER -></a>
         </section>
         <section class="shoe720">
             <img src="img/shoe1.png" alt="picture of the limited edtion 720 monkey">
             <h2>NY RELEASE <br/>720 MONKEY</h2>
-            <a href="#" class="text-btn">Kjøp her</a>
+            <a href="produkt.html" class="text-btn">Kjøp her</a>
         </section>
         <section class="subscribe">
             <h2>ABONNER FOR Å <br/>SE HØSTENS<br/>NYHETER</h2>
@@ -49,11 +54,26 @@
     <footer>
         <section class="contactInfo">
             <h2>KONTAKT OSS</h2>
-            <a href="#" class="white-btn">CHAT</a>
-            <a href="#" class="white-btn">EMAIL</a>
-            <a href="#" class="white-btn">TELEFON</a>
+            <a href="retur.html" class="white-btn">CHAT</a>
+            <a href="retur.html" class="white-btn">EMAIL</a>
+            <a href="retur.html" class="white-btn">TELEFON</a>
         </section>
     </footer>
     </div>
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".menulist")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "menulist") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "menulist"
+            }
+        })
+    </script>
 </body>
 </html>

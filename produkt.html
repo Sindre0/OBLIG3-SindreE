@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/fontawesome.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/brands.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/solid.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Shoeshop</title>
+</head>
+<body>
+    <div id="grid-container">
+    <header>
+        <nav>
+            <a href="index.html" id="logo">Logo</a>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i id="ham" class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div>
+            <ul class="navbar">
+                <li><a href="#">Nyheter</a></li>
+                <li><a href="#">Menn</a></li>
+                <li><a href="#">Damer</a></li>
+                <li><a href="#">Barn</a></li>
+                <li><a href="#">Originals</a></li>
+            </ul>
+            <ul class="menulist">
+                <li><a href="index.html">Hjemmeside</a></li>
+                <li><a href="produkt.html">Produkter</a></li>
+                <li><a href="retur.html">Retur</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="product720">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html">Originals</a></li>
+                <li><a href="index.html">720</a></li>
+            </ul>
+            <h2>720 MONKEY</h2>
+            <h3>kr 2499</h3>
+            <img src="img/shoe.png" alt="picture of the 720monkey">
+        </section>
+        <section class="sizechoose">
+            <h2>Velg størrelse</h2>
+            <ul>
+                <li><a href="#">EU 37</a></li>
+                <li><a href="#">EU 38</a></li>
+                <li><a href="#">EU 39</a></li>
+                <li><a href="#">EU 40</a></li>
+                <li><a href="#">EU 41</a></li>
+                <li><a href="#">EU 42</a></li>
+                <li><a href="#">EU 43</a></li>
+                <li><a href="#">EU 44</a></li>
+                <li><a href="#">EU 45</a></li>
+                <li><a href="#">EU 46</a></li>
+                <li><a href="#">EU 47</a></li>
+                <li><a href="#">EU 48</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <section class="contactInfo">
+            <h2>KONTAKT OSS</h2>
+            <a href="#" class="white-btn">CHAT</a>
+            <a href="#" class="white-btn">EMAIL</a>
+            <a href="#" class="white-btn">TELEFON</a>
+        </section>
+    </footer>
+    </div>
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".menulist")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "menulist") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "menulist"
+            }
+        })
+    </script>
+</body>
+</html>

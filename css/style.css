@@ -29,11 +29,34 @@ header nav {
     display: none;
 }
 
+.menulist {
+    display: none;
+}
+
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
 
 
 main {
     grid-area: main;
-    background-color: #d1d1d1;
+    background-color: #ffffff;
 }
 
 main section img {
@@ -50,6 +73,11 @@ main section img {
 .salebanner h2 {
     display: flex;
     justify-content: center;
+}
+
+.subscribe {
+    background-color: #d1d1d1;
+    padding: 1rem ;
 }
 
 .subscribe h2 {
@@ -111,6 +139,122 @@ main section img {
     text-align: center;
 }
 
+/* Her har jeg funnet kode på w3schools https://www.w3schools.com/howto/howto_css_breadcrumbs.asp
+fordi dette var helt nytt for meg og vi ikke har gjennomgått det i plenum */
+ul.breadcrumb {
+    list-style: none;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 20px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 6px;
+    color: #707070;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #707070;
+}
+
+.product720 h2 {
+    font-size: 32px;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+
+}
+
+.product720 h3 {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 1rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.sizechoose h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.sizechoose ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.sizechoose ul a {
+    display: flex;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #333333;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 400;
+    max-width: 180px;
+    justify-content: center;
+    margin: 0.5rem;
+    list-style-type: none;
+}
+
+.sizechoose ul li {
+    list-style-type: none;
+}
+
+.returheader {
+    margin-left: 2rem;
+}
+
+.returheader h2 {
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+}
+
+.returheader h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.black-btn3 {
+    display: flex;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #333333;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 22px;
+    max-width: 220px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.text-btn2 {
+    display: flex;
+    color: #000;
+    margin-bottom: 2rem;
+    font-size: 22px;
+    
+}
+
+.returinfo {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #b1b1b1;
+}
+
 
 
 
@@ -149,13 +293,32 @@ footer {
         grid-template-areas: "header header header" ". main ." "footer footer footer" ;
     }
 
+    .header {
+        padding-bottom: none;
+    }
+
+    .header nav {
+        display: flex;
+        margin: 1rem;
+        font-size: 20px;
+    }
+
     .navbar{
         display: flex;
+        background-color: #b1b1b1;
+        color: #000;
         flex-direction: row;
+        justify-content: center;
         gap: 1rem;
         list-style: none;
         text-decoration: none;
-        margin: 0;
+        padding: 2rem;
         
+        
+    }
+
+    .navbar li a {
+        color: #000;
+        text-decoration: none;
     }
 }

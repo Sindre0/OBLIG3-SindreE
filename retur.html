@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/fontawesome.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/brands.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.2-web/css/solid.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Shoeshop</title>
+</head>
+<body>
+    <div id="grid-container">
+    <header>
+        <nav>
+            <a href="index.html" id="logo">Logo</a>
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i id="ham" class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+        <div>
+            <ul class="navbar">
+                <li><a href="#">Nyheter</a></li>
+                <li><a href="#">Menn</a></li>
+                <li><a href="#">Damer</a></li>
+                <li><a href="#">Barn</a></li>
+                <li><a href="#">Originals</a></li>
+            </ul>
+            <ul class="menulist">
+                <li><a href="index.html">Hjemmeside</a></li>
+                <li><a href="produkt.html">Produkter</a></li>
+                <li><a href="retur.html">Retur</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="returheader">
+            <h2>RETUR</h2>
+            <h3>30 Dager retur. Helt gratis</h3>
+            <a href="#" class="black-btn3">START EN RETUR</a>
+            <a href="#" class="text-btn2">SPOR EN RETUR</a>
+        </section>
+        <article class="returinfo">
+            <h2>HVORDAN SENDRE RETUR?</h2>
+            <ul>
+                <li>Regler og vilkår: dolor sit amet, consectetur adipiscing elit. Vestibulum metus augue, mattis nec varius volutpat.</li>
+                <li>Curabitur leo metus, imperdiet eu consequat vitae, rhoncus eget quam.</li>
+                <li>Proin luctus eu nibh nec cursus. Proin euismod imperdiet nibh eget iaculis. Vivamus sed sem quis tortor euismod convallis accumsan sed eros.</li>
+                <li>Vestibulum vitae ante mollis, auctor ante eget, mattis augue. Cras libero nisi, tristique vel lacus et, blandit rutrum urna. Sed tincidunt porta felis, quis consequate</li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <section class="contactInfo">
+            <h2>KONTAKT OSS</h2>
+            <a href="#" class="white-btn">CHAT</a>
+            <a href="#" class="white-btn">EMAIL</a>
+            <a href="#" class="white-btn">TELEFON</a>
+        </section>
+    </footer>
+    </div>
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".menulist")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "menulist") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "menulist"
+            }
+        })
+    </script>
+</body>
+</html>
